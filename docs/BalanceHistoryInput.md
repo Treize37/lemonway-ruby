@@ -1,4 +1,4 @@
-# SwaggerClient::BalanceHistoryInput
+# LemonWayClient::BalanceHistoryInput
 
 ## Properties
 Name | Type | Description | Notes

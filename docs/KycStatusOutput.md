@@ -1,4 +1,4 @@
-# SwaggerClient::KycStatusOutput
+# LemonWayClient::KycStatusOutput
 
 ## Properties
 Name | Type | Description | Notes

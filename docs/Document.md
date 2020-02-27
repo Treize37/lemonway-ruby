@@ -1,4 +1,4 @@
-# SwaggerClient::Document
+# LemonWayClient::Document
 
 ## Properties
 Name | Type | Description | Notes

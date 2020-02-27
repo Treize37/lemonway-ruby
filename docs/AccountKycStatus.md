@@ -1,4 +1,4 @@
-# SwaggerClient::AccountKycStatus
+# LemonWayClient::AccountKycStatus
 
 ## Properties
 Name | Type | Description | Notes

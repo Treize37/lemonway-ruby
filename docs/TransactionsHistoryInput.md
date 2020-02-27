@@ -1,4 +1,4 @@
-# SwaggerClient::TransactionsHistoryInput
+# LemonWayClient::TransactionsHistoryInput
 
 ## Properties
 Name | Type | Description | Notes

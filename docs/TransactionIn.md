@@ -1,4 +1,4 @@
-# SwaggerClient::TransactionIn
+# LemonWayClient::TransactionIn
 
 ## Properties
 Name | Type | Description | Notes

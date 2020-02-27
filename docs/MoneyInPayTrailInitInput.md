@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInPayTrailInitInput
+# LemonWayClient::MoneyInPayTrailInitInput
 
 ## Properties
 Name | Type | Description | Notes

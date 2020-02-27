@@ -1,4 +1,4 @@
-# SwaggerClient::Pagination
+# LemonWayClient::Pagination
 
 ## Properties
 Name | Type | Description | Notes

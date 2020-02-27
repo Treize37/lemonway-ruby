@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyIn3DAuthenticateOutput
+# LemonWayClient::MoneyIn3DAuthenticateOutput
 
 ## Properties
 Name | Type | Description | Notes

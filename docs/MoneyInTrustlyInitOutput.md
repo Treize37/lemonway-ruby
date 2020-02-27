@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInTrustlyInitOutput
+# LemonWayClient::MoneyInTrustlyInitOutput
 
 ## Properties
 Name | Type | Description | Notes

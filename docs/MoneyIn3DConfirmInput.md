@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyIn3DConfirmInput
+# LemonWayClient::MoneyIn3DConfirmInput
 
 ## Properties
 Name | Type | Description | Notes

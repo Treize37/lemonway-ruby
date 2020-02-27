@@ -1,4 +1,4 @@
-# SwaggerClient::UploadDocumentOutput
+# LemonWayClient::UploadDocumentOutput
 
 ## Properties
 Name | Type | Description | Notes

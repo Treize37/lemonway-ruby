@@ -1,4 +1,4 @@
-# SwaggerClient::Error
+# LemonWayClient::Error
 
 ## Properties
 Name | Type | Description | Notes

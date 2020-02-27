@@ -1,4 +1,4 @@
-# SwaggerClient::GetMoneyInIBANDetailsInput
+# LemonWayClient::GetMoneyInIBANDetailsInput
 
 ## Properties
 Name | Type | Description | Notes

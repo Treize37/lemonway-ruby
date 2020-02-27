@@ -1,4 +1,4 @@
-# SwaggerClient::GetCompletedPaymentFormOutput
+# LemonWayClient::GetCompletedPaymentFormOutput
 
 ## Properties
 Name | Type | Description | Notes

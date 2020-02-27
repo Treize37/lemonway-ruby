@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInValidateOutput
+# LemonWayClient::MoneyInValidateOutput
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PSP
+# LemonWayClient::PSP
 
 ## Properties
 Name | Type | Description | Notes

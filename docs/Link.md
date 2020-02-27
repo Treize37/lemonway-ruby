@@ -1,4 +1,4 @@
-# SwaggerClient::Link
+# LemonWayClient::Link
 
 ## Properties
 Name | Type | Description | Notes

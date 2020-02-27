@@ -1,4 +1,4 @@
-# SwaggerClient::PrivateData
+# LemonWayClient::PrivateData
 
 ## Properties
 Name | Type | Description | Notes

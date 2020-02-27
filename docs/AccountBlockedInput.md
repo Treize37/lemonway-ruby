@@ -1,4 +1,4 @@
-# SwaggerClient::AccountBlockedInput
+# LemonWayClient::AccountBlockedInput
 
 ## Properties
 Name | Type | Description | Notes

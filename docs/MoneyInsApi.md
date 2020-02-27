@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInsApi
+# LemonWayClient::MoneyInsApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -51,9 +51,9 @@ Use GetMoneyInIBANStatus to obtain the list of all MONEY-IN by fund transfer (no
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 update_date = 'update_date_example' # String | UTC Unix timestamp.
 
@@ -72,7 +72,7 @@ begin
   #looking for a MONEY-IN by fund transfer
   result = api_instance.money_ins_bankwire_get(update_date, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_bankwire_get: #{e}"
 end
 ```
@@ -114,11 +114,11 @@ This functionality enables the WHITE BRAND to create dedicated (virtual) IBANs. 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::CreateIBANInput.new # CreateIBANInput | 
+parameters = LemonWayClient::CreateIBANInput.new # CreateIBANInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -133,7 +133,7 @@ begin
   #Create a dedicated IBAN
   result = api_instance.money_ins_bankwire_iban_create_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_bankwire_iban_create_post: #{e}"
 end
 ```
@@ -173,13 +173,13 @@ This functionality enables the WHITE BRAND to disable dedicated IBANs.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 ibanid = 789 # Integer | 
 
-parameters = SwaggerClient::DisableIBANInput.new # DisableIBANInput | 
+parameters = LemonWayClient::DisableIBANInput.new # DisableIBANInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -194,7 +194,7 @@ begin
   #Disable a dedicated IBAN
   result = api_instance.money_ins_bankwire_iban_disable_post(ibanid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_bankwire_iban_disable_post: #{e}"
 end
 ```
@@ -235,13 +235,13 @@ With the \"CancelMoneyIn\" method, the WHITE BRAND can cancel a pre-authorizatio
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::CancelMoneyInInput.new # CancelMoneyInInput | 
+parameters = LemonWayClient::CancelMoneyInInput.new # CancelMoneyInInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -256,7 +256,7 @@ begin
   #Cancel a money in
   result = api_instance.money_ins_cancel_put(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_cancel_put: #{e}"
 end
 ```
@@ -297,13 +297,13 @@ After initializing a 3DS transaction with MoneyIn3DInit, you can choose not to d
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::MoneyIn3DAuthenticateInput.new # MoneyIn3DAuthenticateInput | 
+parameters = LemonWayClient::MoneyIn3DAuthenticateInput.new # MoneyIn3DAuthenticateInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -318,7 +318,7 @@ begin
   #Check moneyin 3D-Secure status
   result = api_instance.money_ins_card_direct3_d_authenticate_post(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_direct3_d_authenticate_post: #{e}"
 end
 ```
@@ -359,13 +359,13 @@ This method finalizes the credit of a wallet by card after 3D Secure authenticat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::MoneyIn3DConfirmInput.new # MoneyIn3DConfirmInput | 
+parameters = LemonWayClient::MoneyIn3DConfirmInput.new # MoneyIn3DConfirmInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -380,7 +380,7 @@ begin
   #Moneyin 3D Confirm
   result = api_instance.money_ins_card_direct3_d_confirm_put(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_direct3_d_confirm_put: #{e}"
 end
 ```
@@ -421,11 +421,11 @@ One call and you are all set, with this method. Easy to deploy, but without 3D S
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInInput.new # MoneyInInput | 
+parameters = LemonWayClient::MoneyInInput.new # MoneyInInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -440,7 +440,7 @@ begin
   #Credit an account with a non 3D Secure card payment
   result = api_instance.money_ins_card_direct_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_direct_post: #{e}"
 end
 ```
@@ -478,9 +478,9 @@ Get the card(s) associate to a payment account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
@@ -497,7 +497,7 @@ begin
   #Get the card(s) associate to a payment account
   result = api_instance.money_ins_card_get(accountid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_get: #{e}"
 end
 ```
@@ -537,11 +537,11 @@ This feature allows the WHITE BRAND create a payment form for a payer.  <ul><li>
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::CreatePaymentFormInput.new # CreatePaymentFormInput | 
+parameters = LemonWayClient::CreatePaymentFormInput.new # CreatePaymentFormInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -556,7 +556,7 @@ begin
   #Create payment form
   result = api_instance.money_ins_card_payment_form_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_payment_form_post: #{e}"
 end
 ```
@@ -596,13 +596,13 @@ Use this method to ask to credit a payment account with a card linked to the pay
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 cardid = 789 # Integer | 
 
-parameters = SwaggerClient::MoneyInWithCardIdInput.new # MoneyInWithCardIdInput | 
+parameters = LemonWayClient::MoneyInWithCardIdInput.new # MoneyInWithCardIdInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -617,7 +617,7 @@ begin
   #Credit of a payment account with a tokenized card
   result = api_instance.money_ins_card_rebill(cardid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_rebill: #{e}"
 end
 ```
@@ -658,11 +658,11 @@ Create a link between a wallet and a card. Your customers won't have to enter th
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::RegisterCardInput.new # RegisterCardInput | 
+parameters = LemonWayClient::RegisterCardInput.new # RegisterCardInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -677,7 +677,7 @@ begin
   #Resgister a card
   result = api_instance.money_ins_card_register_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_register_post: #{e}"
 end
 ```
@@ -717,13 +717,13 @@ This function allow partner to subscribe to monthly rebill operation. <br />  1.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 cardid = 789 # Integer | 
 
-parameters = SwaggerClient::MoneyInSubscriptionInitInput.new # MoneyInSubscriptionInitInput | 
+parameters = LemonWayClient::MoneyInSubscriptionInitInput.new # MoneyInSubscriptionInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -738,7 +738,7 @@ begin
   #Payment account credited with monthly subscription by card
   result = api_instance.money_ins_card_subscription_post(cardid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_subscription_post: #{e}"
 end
 ```
@@ -779,13 +779,13 @@ This method breaks the link between a card and a payment account.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 cardid = 789 # Integer | 
 
-parameters = SwaggerClient::UnregisterCardInput.new # UnregisterCardInput | 
+parameters = LemonWayClient::UnregisterCardInput.new # UnregisterCardInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -800,7 +800,7 @@ begin
   #Unregister a card token
   result = api_instance.money_ins_card_unregister_put(cardid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_unregister_put: #{e}"
 end
 ```
@@ -841,11 +841,11 @@ This functionality enables the WHITE BRAND to use our card payment web pages.<br
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInWebInitInput.new # MoneyInWebInitInput | 
+parameters = LemonWayClient::MoneyInWebInitInput.new # MoneyInWebInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -860,7 +860,7 @@ begin
   #Indirect mode MONEY-IN by card crediting a payment account
   result = api_instance.money_ins_card_web_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_card_web_init_post: #{e}"
 end
 ```
@@ -900,9 +900,9 @@ Use GetMoneyInChequeStatus to obtain the list of all MONEY-IN by cheque (receive
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 update_date = 'update_date_example' # String | UTC Unix timestamp.
 
@@ -922,7 +922,7 @@ begin
   #Search for MONEY-IN by cheque since a date
   result = api_instance.money_ins_cheque_get(update_date, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_cheque_get: #{e}"
 end
 ```
@@ -965,11 +965,11 @@ Please observe the following rules:  If you want to pre-enter the cheques in our
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInChequeInitInput.new # MoneyInChequeInitInput | 
+parameters = LemonWayClient::MoneyInChequeInitInput.new # MoneyInChequeInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -984,7 +984,7 @@ begin
   #Register a money-in by cheque
   result = api_instance.money_ins_cheque_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_cheque_init_post: #{e}"
 end
 ```
@@ -1024,11 +1024,11 @@ This method is more complex that non 3D Secure payment, but 3D Secure will secur
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyIn3DInitInput.new # MoneyIn3DInitInput | 
+parameters = LemonWayClient::MoneyIn3DInitInput.new # MoneyIn3DInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1043,7 +1043,7 @@ begin
   #Credit a account with a 3D Secure card payment
   result = api_instance.money_ins_direct3_d_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_direct3_d_init_post: #{e}"
 end
 ```
@@ -1083,9 +1083,9 @@ This method finalizes the credit of a payment account by iDeal, after the user h
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 transactionid = 789 # Integer | 
 
@@ -1102,7 +1102,7 @@ begin
   #Finalization of the iDeal payment
   result = api_instance.money_ins_i_deal_confirm_put(transactionid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_i_deal_confirm_put: #{e}"
 end
 ```
@@ -1142,11 +1142,11 @@ You will need 3 integration points on your code:  <ul><li>One call to DIRECTKIT 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInIDealInitInput.new # MoneyInIDealInitInput | 
+parameters = LemonWayClient::MoneyInIDealInitInput.new # MoneyInIDealInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1161,7 +1161,7 @@ begin
   #Initialize iDeal payment
   result = api_instance.money_ins_i_deal_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_i_deal_init_post: #{e}"
 end
 ```
@@ -1199,9 +1199,9 @@ Get the mandate(s) associate to a payment account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
@@ -1218,7 +1218,7 @@ begin
   #Get the mandate(s) associate to a payment account
   result = api_instance.money_ins_mandate_get(accountid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_mandate_get: #{e}"
 end
 ```
@@ -1258,11 +1258,11 @@ Payment process :  <ul><li>the WHITE BRAND call DIRECTKIT API, provide a phone n
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInMbwayInitInput.new # MoneyInMbwayInitInput | 
+parameters = LemonWayClient::MoneyInMbwayInitInput.new # MoneyInMbwayInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1277,7 +1277,7 @@ begin
   #Initialize MB WAY payment
   result = api_instance.money_ins_mbway_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_mbway_init_post: #{e}"
 end
 ```
@@ -1317,11 +1317,11 @@ You will need 2 integration points on your code:  <ul><li>One call to DIRECTKIT 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInMobilePayInitInput.new # MoneyInMobilePayInitInput | 
+parameters = LemonWayClient::MoneyInMobilePayInitInput.new # MoneyInMobilePayInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1336,7 +1336,7 @@ begin
   #Initialize MobilePay payment
   result = api_instance.money_ins_mobile_pay_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_mobile_pay_init_post: #{e}"
 end
 ```
@@ -1376,9 +1376,9 @@ Use \"GetMoneyInTransDetails\" to check and get details about a MONEY-IN that wa
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1400,7 +1400,7 @@ begin
   #Get MoneyIn
   result = api_instance.money_ins_money_in_get(authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_money_in_get: #{e}"
 end
 ```
@@ -1446,11 +1446,11 @@ Payment process :  <ul><li>the WHITE BRAND calls DIRECTKIT API to initialize the
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInMultibancoInitInput.new # MoneyInMultibancoInitInput | 
+parameters = LemonWayClient::MoneyInMultibancoInitInput.new # MoneyInMultibancoInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1465,7 +1465,7 @@ begin
   #Initialize Multibanco payment
   result = api_instance.money_ins_multibanco_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_multibanco_init_post: #{e}"
 end
 ```
@@ -1505,11 +1505,11 @@ You will need 2 integration points on your code:  <ul><li>One call to DIRECTKIT 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInPayTrailInitInput.new # MoneyInPayTrailInitInput | 
+parameters = LemonWayClient::MoneyInPayTrailInitInput.new # MoneyInPayTrailInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1524,7 +1524,7 @@ begin
   #Initialize PayTrail payment
   result = api_instance.money_ins_pay_trail_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_pay_trail_init_post: #{e}"
 end
 ```
@@ -1564,9 +1564,9 @@ This function allows you to retreive the status of a \"completed (or filled) pay
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 formid = 'formid_example' # String | 
 
@@ -1583,7 +1583,7 @@ begin
   #Get details of a completed payment form
   result = api_instance.money_ins_payment_form_completed_get(formid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_payment_form_completed_get: #{e}"
 end
 ```
@@ -1623,9 +1623,9 @@ Disable a payment form created by CreatePaymentForm.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 formid = 'formid_example' # String | 
 
@@ -1642,7 +1642,7 @@ begin
   #Disable a payment form
   result = api_instance.money_ins_payment_form_disable_put(formid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_payment_form_disable_put: #{e}"
 end
 ```
@@ -1682,11 +1682,11 @@ Payment process  <ul><li>the WHITE BRAND call DIRECTKIT API to initialize the cr
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInPayshopInitInput.new # MoneyInPayshopInitInput | 
+parameters = LemonWayClient::MoneyInPayshopInitInput.new # MoneyInPayshopInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1701,7 +1701,7 @@ begin
   #Initialize Payshop payment
   result = api_instance.money_ins_payshop_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_payshop_init_post: #{e}"
 end
 ```
@@ -1741,9 +1741,9 @@ Returns the list of money-in by SDD which status has changed since the input dat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 update_date = 'update_date_example' # String | UTC Unix timestamp.
 
@@ -1762,7 +1762,7 @@ begin
   #List of money-in by SDD
   result = api_instance.money_ins_sdd_get(update_date, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_sdd_get: #{e}"
 end
 ```
@@ -1804,11 +1804,11 @@ SDD requests are sent to our bank every working day at 10:30.<br />  Prequisites
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInSddInitInput.new # MoneyInSddInitInput | 
+parameters = LemonWayClient::MoneyInSddInitInput.new # MoneyInSddInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1823,7 +1823,7 @@ begin
   #Request a Direct Debit (SDD)
   result = api_instance.money_ins_sdd_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_sdd_init_post: #{e}"
 end
 ```
@@ -1863,11 +1863,11 @@ This method allows you to pre-register a mandate. It will then be pending approv
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::RegisterSddMandateInput.new # RegisterSddMandateInput | 
+parameters = LemonWayClient::RegisterSddMandateInput.new # RegisterSddMandateInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1882,7 +1882,7 @@ begin
   #Pre-register an SDD mandate
   result = api_instance.money_ins_sdd_mandate_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_sdd_mandate_post: #{e}"
 end
 ```
@@ -1922,13 +1922,13 @@ This allows you to deactivate a mandate
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 mandatid = 789 # Integer | 
 
-parameters = SwaggerClient::UnregisterSddMandateInput.new # UnregisterSddMandateInput | 
+parameters = LemonWayClient::UnregisterSddMandateInput.new # UnregisterSddMandateInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -1943,7 +1943,7 @@ begin
   #Deactivate a mandate
   result = api_instance.money_ins_sdd_mandate_unregister_put(mandatid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_sdd_mandate_unregister_put: #{e}"
 end
 ```
@@ -1984,11 +1984,11 @@ You will need 2 integration points on your code:  <ul><li>One call to DIRECTKIT 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInSofortInitInput.new # MoneyInSofortInitInput | 
+parameters = LemonWayClient::MoneyInSofortInitInput.new # MoneyInSofortInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -2003,7 +2003,7 @@ begin
   #Initialize Sofort payment
   result = api_instance.money_ins_sofort_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_sofort_init_post: #{e}"
 end
 ```
@@ -2043,11 +2043,11 @@ Trustly is a Swedish payment method used in 29 European countries. With Trustly,
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
-parameters = SwaggerClient::MoneyInTrustlyInitInput.new # MoneyInTrustlyInitInput | 
+parameters = LemonWayClient::MoneyInTrustlyInitInput.new # MoneyInTrustlyInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -2062,7 +2062,7 @@ begin
   #Initialize Trustly payment
   result = api_instance.money_ins_trustly_init_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_trustly_init_post: #{e}"
 end
 ```
@@ -2102,13 +2102,13 @@ This method is only used in differed/pre-authorization mode. You can only valida
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyInsApi.new
+api_instance = LemonWayClient::MoneyInsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::MoneyInValidateInput.new # MoneyInValidateInput | 
+parameters = LemonWayClient::MoneyInValidateInput.new # MoneyInValidateInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -2123,7 +2123,7 @@ begin
   #Validation of a Money-In (deffered payment only)
   result = api_instance.money_ins_validate_put(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyInsApi->money_ins_validate_put: #{e}"
 end
 ```

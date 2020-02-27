@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInMbwayInitInput
+# LemonWayClient::MoneyInMbwayInitInput
 
 ## Properties
 Name | Type | Description | Notes

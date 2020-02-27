@@ -1,4 +1,4 @@
-# SwaggerClient::GetChargebacksInput
+# LemonWayClient::GetChargebacksInput
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::RegisterIBANExtendedInput
+# LemonWayClient::RegisterIBANExtendedInput
 
 ## Properties
 Name | Type | Description | Notes

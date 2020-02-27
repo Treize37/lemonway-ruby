@@ -1,4 +1,4 @@
-# SwaggerClient::CreatePaymentFormInput
+# LemonWayClient::CreatePaymentFormInput
 
 ## Properties
 Name | Type | Description | Notes

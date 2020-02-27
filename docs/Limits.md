@@ -1,4 +1,4 @@
-# SwaggerClient::Limits
+# LemonWayClient::Limits
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInMobilePayInitOutput
+# LemonWayClient::MoneyInMobilePayInitOutput
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::SddMandate
+# LemonWayClient::SddMandate
 
 ## Properties
 Name | Type | Description | Notes

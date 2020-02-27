@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyOutsApi
+# LemonWayClient::MoneyOutsApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -23,13 +23,13 @@ With the \"Cancel method, the WHITE BRAND can cancel a MoneyOut / SDD.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::CancelMoneyOutInput.new # CancelMoneyOutInput | 
+parameters = LemonWayClient::CancelMoneyOutInput.new # CancelMoneyOutInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -44,7 +44,7 @@ begin
   #Cancellation of a Money-Out
   result = api_instance.money_outs_cancel_put(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_cancel_put: #{e}"
 end
 ```
@@ -85,11 +85,11 @@ With \"RegisterIBANExtended\" method, our system links an IBAN outside of the ge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
-parameters = SwaggerClient::RegisterIBANExtendedInput.new # RegisterIBANExtendedInput | 
+parameters = LemonWayClient::RegisterIBANExtendedInput.new # RegisterIBANExtendedInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -104,7 +104,7 @@ begin
   #Link a non-SEPA IBAN to a payment account
   result = api_instance.money_outs_iban_extended_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_iban_extended_post: #{e}"
 end
 ```
@@ -142,9 +142,9 @@ Get the iban(s) associate to a payment account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
@@ -161,7 +161,7 @@ begin
   #Get the iban(s) associate to a payment account
   result = api_instance.money_outs_iban_get(accountid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_iban_get: #{e}"
 end
 ```
@@ -201,11 +201,11 @@ With \"RegisterIBAN\" method, our system links an IBAN to a Payment Account. A P
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
-parameters = SwaggerClient::RegisterIBANInput.new # RegisterIBANInput | 
+parameters = LemonWayClient::RegisterIBANInput.new # RegisterIBANInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -220,7 +220,7 @@ begin
   #Link an IBAN (SEPA area) to a payment account
   result = api_instance.money_outs_iban_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_iban_post: #{e}"
 end
 ```
@@ -260,13 +260,13 @@ With \"UnregisterIBAN\" method, our system disable an IBAN from a Payment Accoun
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
 iban_id = 789 # Integer | 
 
-parameters = SwaggerClient::UnregisterIBANInput.new # UnregisterIBANInput | 
+parameters = LemonWayClient::UnregisterIBANInput.new # UnregisterIBANInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -281,7 +281,7 @@ begin
   #Link a non-SEPA IBAN to a payment account
   result = api_instance.money_outs_iban_unregister_put(iban_id, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_iban_unregister_put: #{e}"
 end
 ```
@@ -322,9 +322,9 @@ Use this method to get and check all MONEY-OUT information.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -343,7 +343,7 @@ begin
   #looking for a money-out
   result = api_instance.money_outs_money_out_get(authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_money_out_get: #{e}"
 end
 ```
@@ -386,11 +386,11 @@ How it works  Choose an IBAN if multiple IBAN exist for the Wallet.Choose an amo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::MoneyOutsApi.new
+api_instance = LemonWayClient::MoneyOutsApi.new
 
-parameters = SwaggerClient::MoneyOutInput.new # MoneyOutInput | 
+parameters = LemonWayClient::MoneyOutInput.new # MoneyOutInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -405,7 +405,7 @@ begin
   #External fund transfer from a payment account to a bank account
   result = api_instance.money_outs_money_out_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling MoneyOutsApi->money_outs_money_out_post: #{e}"
 end
 ```

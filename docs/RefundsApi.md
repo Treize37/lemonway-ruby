@@ -1,4 +1,4 @@
-# SwaggerClient::RefundsApi
+# LemonWayClient::RefundsApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -17,13 +17,13 @@ The general rules are:  <ul><li>The refund can only be performed on the card or 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = LemonWayClient::RefundsApi.new
 
 transactionid = 789 # Integer | 
 
-parameters = SwaggerClient::RefundMoneyInInput.new # RefundMoneyInInput | 
+parameters = LemonWayClient::RefundMoneyInInput.new # RefundMoneyInInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -38,7 +38,7 @@ begin
   #Refund a money-in
   result = api_instance.refunds_refund_put(transactionid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling RefundsApi->refunds_refund_put: #{e}"
 end
 ```

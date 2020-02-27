@@ -1,4 +1,4 @@
-# SwaggerClient::UnregisterCardOutput
+# LemonWayClient::UnregisterCardOutput
 
 ## Properties
 Name | Type | Description | Notes

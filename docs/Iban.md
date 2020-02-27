@@ -1,4 +1,4 @@
-# SwaggerClient::Iban
+# LemonWayClient::Iban
 
 ## Properties
 Name | Type | Description | Notes

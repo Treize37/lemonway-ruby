@@ -1,4 +1,4 @@
-# SwaggerClient::CancelMoneyOutOutput
+# LemonWayClient::CancelMoneyOutOutput
 
 ## Properties
 Name | Type | Description | Notes

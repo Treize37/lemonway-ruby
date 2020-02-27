@@ -1,4 +1,4 @@
-# SwaggerClient::UpdateLegalAccountDetailsInput
+# LemonWayClient::UpdateLegalAccountDetailsInput
 
 ## Properties
 Name | Type | Description | Notes

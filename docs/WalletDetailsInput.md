@@ -1,4 +1,4 @@
-# SwaggerClient::WalletDetailsInput
+# LemonWayClient::WalletDetailsInput
 
 ## Properties
 Name | Type | Description | Notes

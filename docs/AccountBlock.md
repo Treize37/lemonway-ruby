@@ -1,4 +1,4 @@
-# SwaggerClient::AccountBlock
+# LemonWayClient::AccountBlock
 
 ## Properties
 Name | Type | Description | Notes

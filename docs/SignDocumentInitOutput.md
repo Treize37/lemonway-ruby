@@ -1,4 +1,4 @@
-# SwaggerClient::SignDocumentInitOutput
+# LemonWayClient::SignDocumentInitOutput
 
 ## Properties
 Name | Type | Description | Notes

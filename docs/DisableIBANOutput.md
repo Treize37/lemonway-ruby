@@ -1,4 +1,4 @@
-# SwaggerClient::DisableIBANOutput
+# LemonWayClient::DisableIBANOutput
 
 ## Properties
 Name | Type | Description | Notes

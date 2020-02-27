@@ -1,4 +1,4 @@
-# SwaggerClient::TransactionP2P
+# LemonWayClient::TransactionP2P
 
 ## Properties
 Name | Type | Description | Notes

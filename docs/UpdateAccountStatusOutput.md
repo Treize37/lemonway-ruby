@@ -1,4 +1,4 @@
-# SwaggerClient::UpdateAccountStatusOutput
+# LemonWayClient::UpdateAccountStatusOutput
 
 ## Properties
 Name | Type | Description | Notes

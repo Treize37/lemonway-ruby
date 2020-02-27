@@ -1,4 +1,4 @@
-# SwaggerClient::Card
+# LemonWayClient::Card
 
 ## Properties
 Name | Type | Description | Notes

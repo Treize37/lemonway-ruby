@@ -1,4 +1,4 @@
-# SwaggerClient::Birth
+# LemonWayClient::Birth
 
 ## Properties
 Name | Type | Description | Notes

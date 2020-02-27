@@ -1,4 +1,4 @@
-# SwaggerClient::Company
+# LemonWayClient::Company
 
 ## Properties
 Name | Type | Description | Notes

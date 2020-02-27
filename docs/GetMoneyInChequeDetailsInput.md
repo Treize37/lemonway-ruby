@@ -1,4 +1,4 @@
-# SwaggerClient::GetMoneyInChequeDetailsInput
+# LemonWayClient::GetMoneyInChequeDetailsInput
 
 ## Properties
 Name | Type | Description | Notes

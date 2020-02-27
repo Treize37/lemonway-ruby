@@ -1,4 +1,4 @@
-# SwaggerClient::LemonWayCommission
+# LemonWayClient::LemonWayCommission
 
 ## Properties
 Name | Type | Description | Notes

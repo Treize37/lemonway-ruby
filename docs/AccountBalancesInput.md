@@ -1,4 +1,4 @@
-# SwaggerClient::AccountBalancesInput
+# LemonWayClient::AccountBalancesInput
 
 ## Properties
 Name | Type | Description | Notes

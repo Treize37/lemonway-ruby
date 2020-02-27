@@ -1,4 +1,4 @@
-# SwaggerClient::AccountDetailsOutput
+# LemonWayClient::AccountDetailsOutput
 
 ## Properties
 Name | Type | Description | Notes

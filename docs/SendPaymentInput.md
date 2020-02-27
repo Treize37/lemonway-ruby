@@ -1,4 +1,4 @@
-# SwaggerClient::SendPaymentInput
+# LemonWayClient::SendPaymentInput
 
 ## Properties
 Name | Type | Description | Notes

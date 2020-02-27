@@ -1,4 +1,4 @@
-# SwaggerClient::DisablePaymentFormOutput
+# LemonWayClient::DisablePaymentFormOutput
 
 ## Properties
 Name | Type | Description | Notes

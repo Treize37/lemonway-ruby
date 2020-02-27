@@ -1,4 +1,4 @@
-# SwaggerClient::P2PsApi
+# LemonWayClient::P2PsApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -18,9 +18,9 @@ Returns a lit of payments (between payments accounts ) that match the search fie
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::P2PsApi.new
+api_instance = LemonWayClient::P2PsApi.new
 
 transactionid = 'transactionid_example' # String | 
 
@@ -42,7 +42,7 @@ begin
   #looking for payments between payments accounts
   result = api_instance.p2_ps_p2p_get(transactionid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling P2PsApi->p2_ps_p2p_get: #{e}"
 end
 ```
@@ -87,11 +87,11 @@ This function debits a wallet A and credits a wallet B. payments accounts  are i
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::P2PsApi.new
+api_instance = LemonWayClient::P2PsApi.new
 
-parameters = SwaggerClient::SendPaymentInput.new # SendPaymentInput | 
+parameters = LemonWayClient::SendPaymentInput.new # SendPaymentInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -106,7 +106,7 @@ begin
   #On-Us payment between payments accounts
   result = api_instance.p2_ps_p2p_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling P2PsApi->p2_ps_p2p_post: #{e}"
 end
 ```

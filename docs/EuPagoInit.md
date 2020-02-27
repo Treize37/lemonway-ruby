@@ -1,4 +1,4 @@
-# SwaggerClient::EuPagoInit
+# LemonWayClient::EuPagoInit
 
 ## Properties
 Name | Type | Description | Notes

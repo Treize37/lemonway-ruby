@@ -1,4 +1,4 @@
-# SwaggerClient::RegisterSddMandateOutput
+# LemonWayClient::RegisterSddMandateOutput
 
 ## Properties
 Name | Type | Description | Notes

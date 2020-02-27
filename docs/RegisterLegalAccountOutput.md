@@ -1,4 +1,4 @@
-# SwaggerClient::RegisterLegalAccountOutput
+# LemonWayClient::RegisterLegalAccountOutput
 
 ## Properties
 Name | Type | Description | Notes

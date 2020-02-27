@@ -1,4 +1,4 @@
-# SwaggerClient::MoneyInWithCardIdOutput
+# LemonWayClient::MoneyInWithCardIdOutput
 
 ## Properties
 Name | Type | Description | Notes

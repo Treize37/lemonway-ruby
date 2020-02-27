@@ -1,4 +1,4 @@
-# SwaggerClient::UnregisterSddMandateInput
+# LemonWayClient::UnregisterSddMandateInput
 
 ## Properties
 Name | Type | Description | Notes

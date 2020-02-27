@@ -1,4 +1,4 @@
-# SwaggerClient::AccountsApi
+# LemonWayClient::AccountsApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -31,9 +31,9 @@ This method is often used by your system, to get all information regarding a pay
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
@@ -50,7 +50,7 @@ begin
   #Getting detailed payment account data
   result = api_instance.accounts_account_single_get(accountid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_account_single_get: #{e}"
 end
 ```
@@ -90,9 +90,9 @@ Use GetBalances to get all payment accounts which balance have changed since the
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -112,7 +112,7 @@ begin
   #Getting all payments accounts balances
   result = api_instance.accounts_balances_get(authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_balances_get: #{e}"
 end
 ```
@@ -154,9 +154,9 @@ Getting payment account balance history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 account_id = 'account_id_example' # String | Account ID
 
@@ -174,7 +174,7 @@ begin
   #Getting payment account balance history
   result = api_instance.accounts_balances_history_get(account_id, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_balances_history_get: #{e}"
 end
 ```
@@ -213,13 +213,13 @@ Block, unblock account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
-parameters = SwaggerClient::AccountBlockedInput.new # AccountBlockedInput | 
+parameters = LemonWayClient::AccountBlockedInput.new # AccountBlockedInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -234,7 +234,7 @@ begin
   #Block, unblock account
   result = api_instance.accounts_blocked_put(accountid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_blocked_put: #{e}"
 end
 ```
@@ -273,9 +273,9 @@ Get the document(s) associate to a payment account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
@@ -292,7 +292,7 @@ begin
   #Get the document(s) associate to a payment account
   result = api_instance.accounts_document_get(accountid, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_document_get: #{e}"
 end
 ```
@@ -332,15 +332,15 @@ This functionality allows you to initialize an electronic signature. For now, on
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Payment account ID
 
 documentid = 789 # Integer | 
 
-parameters = SwaggerClient::SignDocumentInitInput.new # SignDocumentInitInput | 
+parameters = LemonWayClient::SignDocumentInitInput.new # SignDocumentInitInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -355,7 +355,7 @@ begin
   #Initialize electronic signature of a document
   result = api_instance.accounts_documents_sign_init_post(accountid, documentid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_documents_sign_init_post: #{e}"
 end
 ```
@@ -397,13 +397,13 @@ Use UploadFile to upload documents into a payment account, with a file size smal
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account id
 
-parameters = SwaggerClient::UploadDocumentInput.new # UploadDocumentInput | 
+parameters = LemonWayClient::UploadDocumentInput.new # UploadDocumentInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -418,7 +418,7 @@ begin
   #document upload for KYC
   result = api_instance.accounts_documents_upload_post(accountid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_documents_upload_post: #{e}"
 end
 ```
@@ -459,11 +459,11 @@ By calling this method, the WHITE BRAND asks Lemon Way to create a individual pa
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
-parameters = SwaggerClient::RegisterIndividualAccountInput.new # RegisterIndividualAccountInput | 
+parameters = LemonWayClient::RegisterIndividualAccountInput.new # RegisterIndividualAccountInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -478,7 +478,7 @@ begin
   #Create a new individual account
   result = api_instance.accounts_individual_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_individual_post: #{e}"
 end
 ```
@@ -518,13 +518,13 @@ With this method, the WHITE BRAND system asks Lemon Way to update information re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
-parameters = SwaggerClient::UpdateIndividualAccountDetailsInput.new # UpdateIndividualAccountDetailsInput | 
+parameters = LemonWayClient::UpdateIndividualAccountDetailsInput.new # UpdateIndividualAccountDetailsInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -539,7 +539,7 @@ begin
   #Update payment account data
   result = api_instance.accounts_individual_put(accountid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_individual_put: #{e}"
 end
 ```
@@ -580,9 +580,9 @@ Use this method to look for users, documents, IBAN for which the status has chan
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 update_date = 'update_date_example' # String | UTC Unix timestamp.
 
@@ -601,7 +601,7 @@ begin
   #Looking for user, document, IBAN, modified since an entry date
   result = api_instance.accounts_kyc_status_get(update_date, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_kyc_status_get: #{e}"
 end
 ```
@@ -643,13 +643,13 @@ With this method, payment account status can be updated or closed.<br />  NOTE :
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
-parameters = SwaggerClient::UpdateAccountStatusInput.new # UpdateAccountStatusInput | 
+parameters = LemonWayClient::UpdateAccountStatusInput.new # UpdateAccountStatusInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -664,7 +664,7 @@ begin
   #Update payment account status
   result = api_instance.accounts_kycstatus_put(accountid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_kycstatus_put: #{e}"
 end
 ```
@@ -705,11 +705,11 @@ By calling this method, the WHITE BRAND asks Lemon Way to create a legal payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
-parameters = SwaggerClient::RegisterLegalAccountInput.new # RegisterLegalAccountInput | 
+parameters = LemonWayClient::RegisterLegalAccountInput.new # RegisterLegalAccountInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -724,7 +724,7 @@ begin
   #Create a new legal account
   result = api_instance.accounts_legal_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_legal_post: #{e}"
 end
 ```
@@ -764,13 +764,13 @@ With this method, the WHITE BRAND system asks Lemon Way to update information re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 accountid = 'accountid_example' # String | Account ID
 
-parameters = SwaggerClient::UpdateLegalAccountDetailsInput.new # UpdateLegalAccountDetailsInput | 
+parameters = LemonWayClient::UpdateLegalAccountDetailsInput.new # UpdateLegalAccountDetailsInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -785,7 +785,7 @@ begin
   #Update payment account data
   result = api_instance.accounts_legal_single_put(accountid, parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_legal_single_put: #{e}"
 end
 ```
@@ -826,11 +826,11 @@ This method is often used by your system, to get all information regarding a pay
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
-parameters = SwaggerClient::AccountDetailsBatchInput.new # AccountDetailsBatchInput | 
+parameters = LemonWayClient::AccountDetailsBatchInput.new # AccountDetailsBatchInput | 
 
 authorization = 'authorization_example' # String | Authorization bearer (OAuth 2)
 
@@ -846,7 +846,7 @@ begin
   #Getting detailed payments accounts data
   result = api_instance.accounts_retrieve_post(parameters, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_retrieve_post: #{e}"
 end
 ```
@@ -887,9 +887,9 @@ Use GetWalletTransHistory to retrieve the list of money-in, money-out and p2p (p
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = LemonWayClient::AccountsApi.new
 
 account_id = 'account_id_example' # String | Accounbt ID
 
@@ -910,7 +910,7 @@ begin
   #Get list of all transactions of a payment account
   result = api_instance.accounts_transactions_get(account_id, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling AccountsApi->accounts_transactions_get: #{e}"
 end
 ```

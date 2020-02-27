@@ -1,4 +1,4 @@
-# SwaggerClient::RefundMoneyInOutput
+# LemonWayClient::RefundMoneyInOutput
 
 ## Properties
 Name | Type | Description | Notes

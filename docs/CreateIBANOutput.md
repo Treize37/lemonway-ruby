@@ -1,4 +1,4 @@
-# SwaggerClient::CreateIBANOutput
+# LemonWayClient::CreateIBANOutput
 
 ## Properties
 Name | Type | Description | Notes

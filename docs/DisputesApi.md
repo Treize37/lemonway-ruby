@@ -1,4 +1,4 @@
-# SwaggerClient::DisputesApi
+# LemonWayClient::DisputesApi
 
 All URIs are relative to *https://localhost/webservice*
 
@@ -15,9 +15,9 @@ Get list of disputes from a given date
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'lemonway-ruby'
 
-api_instance = SwaggerClient::DisputesApi.new
+api_instance = LemonWayClient::DisputesApi.new
 
 update_date = 'update_date_example' # String | UTC Unix timestamp.
 
@@ -36,7 +36,7 @@ begin
   #Get list of disputes from a given date
   result = api_instance.disputes_disputes_get(update_date, authorization, psu_ip_address, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue LemonWayClient::ApiError => e
   puts "Exception when calling DisputesApi->disputes_disputes_get: #{e}"
 end
 ```

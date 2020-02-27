@@ -1,4 +1,4 @@
-# SwaggerClient::UnregisterIBANInput
+# LemonWayClient::UnregisterIBANInput
 
 ## Properties
 Name | Type | Description | Notes

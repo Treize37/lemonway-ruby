@@ -1,4 +1,4 @@
-# SwaggerClient::AccountDetailsBatchInput
+# LemonWayClient::AccountDetailsBatchInput
 
 ## Properties
 Name | Type | Description | Notes
