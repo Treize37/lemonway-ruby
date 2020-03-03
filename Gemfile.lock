@@ -19,7 +19,7 @@ GEM
     hashdiff (1.0.0)
     json (2.3.0)
     public_suffix (4.0.3)
-    rake (12.0.0)
+    rake (13.0.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -46,9 +46,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rake (~> 12.0.0)
-  rspec (~> 3.6, >= 3.6.0)
   lemonway-ruby!
+  rake (~> 13.0.0)
+  rspec (~> 3.6, >= 3.6.0)
   vcr (~> 3.0, >= 3.0.1)
   webmock (~> 1.24, >= 1.24.3)
 
