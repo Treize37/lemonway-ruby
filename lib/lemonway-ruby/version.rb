@@ -11,5 +11,5 @@ LemonWay Codegen version: 2.4.12
 =end
 
 module LemonWayClient
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 end
