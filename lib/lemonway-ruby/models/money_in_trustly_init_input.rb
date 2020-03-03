@@ -133,9 +133,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "final_customer_email", final_customer_email cannot be nil.')
       end
 
-      # if @final_customer_email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   invalid_properties.push('invalid value for "final_customer_email", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.')
-      # end
+      if @final_customer_email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        invalid_properties.push("invalid value for \"final_customer_email\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}")
+      end
 
       if @final_customer_first_name.nil?
         invalid_properties.push('invalid value for "final_customer_first_name", final_customer_first_name cannot be nil.')
@@ -188,7 +188,7 @@ module LemonWayClient
     # @return true if the model is valid
     def valid?
       return false if @final_customer_email.nil?
-      # return false if @final_customer_email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
+      return false if @final_customer_email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
       return false if @final_customer_first_name.nil?
       return false if @final_customer_last_name.nil?
       return false if @return_url.nil?
@@ -210,9 +210,9 @@ module LemonWayClient
         fail ArgumentError, 'final_customer_email cannot be nil'
       end
 
-      # if final_customer_email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   fail ArgumentError, 'invalid value for "final_customer_email", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.'
-      # end
+      if final_customer_email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        fail ArgumentError, "invalid value for \"final_customer_email\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}"
+      end
 
       @final_customer_email = final_customer_email
     end
