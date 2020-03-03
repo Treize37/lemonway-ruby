@@ -263,9 +263,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "email_payer", the character length must be great than or equal to 0.')
       end
 
-      # if !@email_payer.nil? && @email_payer !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   invalid_properties.push('invalid value for "email_payer", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.')
-      # end
+      if !@email_payer.nil? && @email_payer !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        invalid_properties.push("invalid value for \"email_payer\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}.")
+      end
 
       if !@style.nil? && @style.to_s.length > 255
         invalid_properties.push('invalid value for "style", the character length must be smaller than or equal to 255.')
@@ -325,7 +325,7 @@ module LemonWayClient
       return false if !@last_name_payer.nil? && @last_name_payer.to_s.length < 0
       return false if !@email_payer.nil? && @email_payer.to_s.length > 255
       return false if !@email_payer.nil? && @email_payer.to_s.length < 0
-      # return false if !@email_payer.nil? && @email_payer !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
+      return false if !@email_payer.nil? && @email_payer !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
       return false if !@style.nil? && @style.to_s.length > 255
       return false if !@style.nil? && @style.to_s.length < 0
       return false if !@atos_style.nil? && @atos_style.to_s.length > 255
@@ -474,9 +474,9 @@ module LemonWayClient
         fail ArgumentError, 'invalid value for "email_payer", the character length must be great than or equal to 0.'
       end
 
-      # if !email_payer.nil? && email_payer !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   fail ArgumentError, 'invalid value for "email_payer", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.'
-      # end
+      if !email_payer.nil? && email_payer !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        fail ArgumentError, "invalid value for \"email_payer\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}."
+      end
 
       @email_payer = email_payer
     end

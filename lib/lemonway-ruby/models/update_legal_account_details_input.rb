@@ -159,9 +159,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "email", the character length must be great than or equal to 6.')
       end
 
-      # if !@email.nil? && @email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   invalid_properties.push('invalid value for "email", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.')
-      # end
+      if !@email.nil? && @email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        invalid_properties.push("invalid value for \"email\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}.")
+      end
 
       if @title.nil?
         invalid_properties.push('invalid value for "title", title cannot be nil.')
@@ -244,7 +244,7 @@ module LemonWayClient
       return false if @company.nil?
       return false if !@email.nil? && @email.to_s.length > 256
       return false if !@email.nil? && @email.to_s.length < 6
-      # return false if !@email.nil? && @email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
+      return false if !@email.nil? && @email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
       return false if @title.nil?
       return false if @title.to_s.length > 1
       return false if @title.to_s.length < 1
@@ -277,9 +277,9 @@ module LemonWayClient
         fail ArgumentError, 'invalid value for "email", the character length must be great than or equal to 6.'
       end
 
-      # if !email.nil? && email !~ Regexp.new(/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)
-      #   fail ArgumentError, 'invalid value for "email", must conform to the pattern /^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.'
-      # end
+      if !email.nil? && email !~ Regexp.new(URI::MailTo::EMAIL_REGEXP)
+        fail ArgumentError, "invalid value for \"email\", must conform to the pattern #{URI::MailTo::EMAIL_REGEXP}."
+      end
 
       @email = email
     end
