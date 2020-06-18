@@ -28,7 +28,7 @@ module LemonWayClient
     def self.attribute_map
       {
         :'web_kit_token' => :'webKitToken',
-        :'id_' => :'id ',
+        :'id_' => :'id',
         :'card_id' => :'cardId',
         :'error' => :'error'
       }
@@ -56,8 +56,8 @@ module LemonWayClient
         self.web_kit_token = attributes[:'webKitToken']
       end
 
-      if attributes.has_key?(:'id ')
-        self.id_ = attributes[:'id ']
+      if attributes.has_key?(:'id')
+        self.id_ = attributes[:'id']
       end
 
       if attributes.has_key?(:'cardId')
