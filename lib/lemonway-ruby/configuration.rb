@@ -127,6 +127,8 @@ module LemonWayClient
 
     attr_accessor :force_ending_format
 
+    attr_accessor :proxy
+
     def initialize
       @scheme = 'https'
       @host = ''
@@ -144,6 +146,7 @@ module LemonWayClient
       @inject_format = false
       @force_ending_format = false
       @logger = defined?(Rails) ? Rails.logger : Logger.new(STDOUT)
+      @proxy = nil
 
       yield(self) if block_given?
     end
