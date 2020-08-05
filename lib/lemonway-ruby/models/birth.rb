@@ -70,8 +70,8 @@ module LemonWayClient
         invalid_properties.push('invalid value for "date", date cannot be nil.')
       end
 
-      if @date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        invalid_properties.push('invalid value for "date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.')
+      if @date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        invalid_properties.push('invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.')
       end
 
       if !@city.nil? && @city.to_s.length > 140
@@ -97,7 +97,7 @@ module LemonWayClient
     # @return true if the model is valid
     def valid?
       return false if @date.nil?
-      return false if @date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
+      return false if @date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
       return false if !@city.nil? && @city.to_s.length > 140
       return false if !@city.nil? && @city.to_s.length < 0
       return false if !@country.nil? && @country.to_s.length > 3
@@ -112,8 +112,8 @@ module LemonWayClient
         fail ArgumentError, 'date cannot be nil'
       end
 
-      if date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        fail ArgumentError, 'invalid value for "date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.'
+      if date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        fail ArgumentError, 'invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.'
       end
 
       @date = date

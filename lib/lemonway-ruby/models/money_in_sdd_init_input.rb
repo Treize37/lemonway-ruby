@@ -106,8 +106,8 @@ module LemonWayClient
         invalid_properties.push('invalid value for "sdd_mandate_id", sdd_mandate_id cannot be nil.')
       end
 
-      if !@collection_date.nil? && @collection_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        invalid_properties.push('invalid value for "collection_date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.')
+      if !@collection_date.nil? && @collection_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        invalid_properties.push('invalid value for "collection_date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.')
       end
 
       if @account_id.nil?
@@ -137,7 +137,7 @@ module LemonWayClient
     # @return true if the model is valid
     def valid?
       return false if @sdd_mandate_id.nil?
-      return false if !@collection_date.nil? && @collection_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
+      return false if !@collection_date.nil? && @collection_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
       return false if @account_id.nil?
       return false if @account_id.to_s.length > 256
       return false if @account_id.to_s.length < 0
@@ -149,8 +149,8 @@ module LemonWayClient
     # Custom attribute writer method with validation
     # @param [Object] collection_date Value to be assigned
     def collection_date=(collection_date)
-      if !collection_date.nil? && collection_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        fail ArgumentError, 'invalid value for "collection_date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.'
+      if !collection_date.nil? && collection_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        fail ArgumentError, 'invalid value for "collection_date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.'
       end
 
       @collection_date = collection_date
