@@ -142,17 +142,17 @@ module LemonWayClient
     # Custom attribute writer method with validation
     # @param [Object] name Value to be assigned
     def name=(name)
-      if name.nil?
-        fail ArgumentError, 'name cannot be nil'
-      end
+      # if name.nil?
+      #   fail ArgumentError, 'name cannot be nil'
+      # end
 
       if name.to_s.length > 256
         fail ArgumentError, 'invalid value for "name", the character length must be smaller than or equal to 256.'
       end
 
-      if name.to_s.length < 1
-        fail ArgumentError, 'invalid value for "name", the character length must be great than or equal to 1.'
-      end
+      # if name.to_s.length < 1
+      #   fail ArgumentError, 'invalid value for "name", the character length must be great than or equal to 1.'
+      # end
 
       @name = name
     end
@@ -160,17 +160,17 @@ module LemonWayClient
     # Custom attribute writer method with validation
     # @param [Object] description Value to be assigned
     def description=(description)
-      if description.nil?
-        fail ArgumentError, 'description cannot be nil'
-      end
+      # if description.nil?
+      #   fail ArgumentError, 'description cannot be nil'
+      # end
 
       if description.to_s.length > 256
         fail ArgumentError, 'invalid value for "description", the character length must be smaller than or equal to 256.'
       end
 
-      if description.to_s.length < 1
-        fail ArgumentError, 'invalid value for "description", the character length must be great than or equal to 1.'
-      end
+      # if description.to_s.length < 1
+      #   fail ArgumentError, 'invalid value for "description", the character length must be great than or equal to 1.'
+      # end
 
       @description = description
     end
@@ -178,17 +178,17 @@ module LemonWayClient
     # Custom attribute writer method with validation
     # @param [Object] website_url Value to be assigned
     def website_url=(website_url)
-      if website_url.nil?
-        fail ArgumentError, 'website_url cannot be nil'
-      end
+      # if website_url.nil?
+      #   fail ArgumentError, 'website_url cannot be nil'
+      # end
 
       if website_url.to_s.length > 256
         fail ArgumentError, 'invalid value for "website_url", the character length must be smaller than or equal to 256.'
       end
 
-      if website_url.to_s.length < 1
-        fail ArgumentError, 'invalid value for "website_url", the character length must be great than or equal to 1.'
-      end
+      # if website_url.to_s.length < 1
+      #   fail ArgumentError, 'invalid value for "website_url", the character length must be great than or equal to 1.'
+      # end
 
       @website_url = website_url
     end
@@ -200,9 +200,9 @@ module LemonWayClient
         fail ArgumentError, 'invalid value for "identification_number", the character length must be smaller than or equal to 256.'
       end
 
-      if !identification_number.nil? && identification_number.to_s.length < 1
-        fail ArgumentError, 'invalid value for "identification_number", the character length must be great than or equal to 1.'
-      end
+      # if !identification_number.nil? && identification_number.to_s.length < 1
+      #   fail ArgumentError, 'invalid value for "identification_number", the character length must be great than or equal to 1.'
+      # end
 
       @identification_number = identification_number
     end
