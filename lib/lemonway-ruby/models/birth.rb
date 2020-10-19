@@ -86,9 +86,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "country", the character length must be smaller than or equal to 3.')
       end
 
-      if !@country.nil? && @country.to_s.length < 3
-        invalid_properties.push('invalid value for "country", the character length must be great than or equal to 3.')
-      end
+      # if !@country.nil? && @country.to_s.length < 3
+      #   invalid_properties.push('invalid value for "country", the character length must be great than or equal to 3.')
+      # end
 
       invalid_properties
     end
@@ -140,9 +140,9 @@ module LemonWayClient
         fail ArgumentError, 'invalid value for "country", the character length must be smaller than or equal to 3.'
       end
 
-      if !country.nil? && country.to_s.length < 3
-        fail ArgumentError, 'invalid value for "country", the character length must be great than or equal to 3.'
-      end
+      # if !country.nil? && country.to_s.length < 3
+      #   fail ArgumentError, 'invalid value for "country", the character length must be great than or equal to 3.'
+      # end
 
       @country = country
     end
