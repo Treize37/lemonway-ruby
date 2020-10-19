@@ -142,8 +142,8 @@ module LemonWayClient
         invalid_properties.push('invalid value for "comment", the character length must be great than or equal to 0.')
       end
 
-      if !@scheduled_date.nil? && @scheduled_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        invalid_properties.push('invalid value for "scheduled_date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.')
+      if !@scheduled_date.nil? && @scheduled_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        invalid_properties.push('invalid value for "scheduled_date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.')
       end
 
       if !@reference.nil? && @reference.to_s.length > 36
@@ -168,7 +168,7 @@ module LemonWayClient
       return false if @credit_account_id.to_s.length < 0
       return false if !@comment.nil? && @comment.to_s.length > 140
       return false if !@comment.nil? && @comment.to_s.length < 0
-      return false if !@scheduled_date.nil? && @scheduled_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
+      return false if !@scheduled_date.nil? && @scheduled_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
       return false if !@reference.nil? && @reference.to_s.length > 36
       return false if !@reference.nil? && @reference.to_s.length < 0
       true
@@ -227,8 +227,8 @@ module LemonWayClient
     # Custom attribute writer method with validation
     # @param [Object] scheduled_date Value to be assigned
     def scheduled_date=(scheduled_date)
-      if !scheduled_date.nil? && scheduled_date !~ Regexp.new(/^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/)
-        fail ArgumentError, 'invalid value for "scheduled_date", must conform to the pattern /^[12]\\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\\d|3[01])$/.'
+      if !scheduled_date.nil? && scheduled_date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+        fail ArgumentError, 'invalid value for "scheduled_date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.'
       end
 
       @scheduled_date = scheduled_date
