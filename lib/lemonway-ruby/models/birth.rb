@@ -70,9 +70,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "date", date cannot be nil.')
       end
 
-      if @date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
-        invalid_properties.push('invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.')
-      end
+      # if @date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+      #   invalid_properties.push('invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.')
+      # end
 
       if !@city.nil? && @city.to_s.length > 140
         invalid_properties.push('invalid value for "city", the character length must be smaller than or equal to 140.')
@@ -86,9 +86,9 @@ module LemonWayClient
         invalid_properties.push('invalid value for "country", the character length must be smaller than or equal to 3.')
       end
 
-      if !@country.nil? && @country.to_s.length < 3
-        invalid_properties.push('invalid value for "country", the character length must be great than or equal to 3.')
-      end
+      # if !@country.nil? && @country.to_s.length < 3
+      #   invalid_properties.push('invalid value for "country", the character length must be great than or equal to 3.')
+      # end
 
       invalid_properties
     end
@@ -112,9 +112,9 @@ module LemonWayClient
         fail ArgumentError, 'date cannot be nil'
       end
 
-      if date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
-        fail ArgumentError, 'invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.'
-      end
+      # if date !~ Regexp.new(/([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/)
+      #   fail ArgumentError, 'invalid value for "date", must conform to the pattern /([12]\d{3}\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01]))/.'
+      # end
 
       @date = date
     end
@@ -140,9 +140,9 @@ module LemonWayClient
         fail ArgumentError, 'invalid value for "country", the character length must be smaller than or equal to 3.'
       end
 
-      if !country.nil? && country.to_s.length < 3
-        fail ArgumentError, 'invalid value for "country", the character length must be great than or equal to 3.'
-      end
+      # if !country.nil? && country.to_s.length < 3
+      #   fail ArgumentError, 'invalid value for "country", the character length must be great than or equal to 3.'
+      # end
 
       @country = country
     end
